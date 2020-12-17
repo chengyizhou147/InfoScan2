@@ -67,7 +67,7 @@ class Cunhuo_domain(object):
                     if 'http' in url:
                         head = requests.get(url, timeout=4)
                         #print(head.status_code)
-                        if head.status_code != 404 and head.status_code != 500:
+                        if head.status_code != 404 and head.status_code != 500 and head.status_code != 403:
                             parse = urlparse(head.url)
                             new_url = "%s://%s/" % (parse.scheme, parse.netloc)
                             #logger.log('INFOR',new_url, head)
@@ -78,7 +78,7 @@ class Cunhuo_domain(object):
                         http_url = 'http://' + url
                         head = requests.get(http_url, timeout=4)
                         #print(head.status_code)
-                        if head.status_code != 404 and head.status_code != 500:
+                        if head.status_code != 404 and head.status_code != 500 and head.status_code != 403:
                             parse = urlparse(head.url)
                             new_url = "%s://%s/" % (parse.scheme, parse.netloc)
                             #logger.log('INFOR',new_url, head)
