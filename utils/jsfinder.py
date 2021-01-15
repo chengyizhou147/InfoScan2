@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 # 用来爬取网站连接
-# 参考(抄袭)链接https://github.com/Threezh1/JSFinder/blob/master/JSFinder.py
+# 参考链接https://github.com/Threezh1/JSFinder/blob/master/JSFinder.py
 from bs4 import BeautifulSoup
 from utils.common import *
 import threading
